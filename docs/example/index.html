@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js example</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <!--<script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>-->
+    <script src="setting.js"></script>
+        <script type="text/javascript">
+
+var param = getParameter();
+var w1n = param['w1n'];
+var w1w = param['w1w'];
+var w1s = param['w1s'];
+var w2n = param['w2n'];
+var w2e = param['w2e'];
+var w2s = param['w2s'];
+var seikai = param['seikai'];
+  </script>
+
+
+    <script src="sketch.js"></script>
+    
+    
+ 
+    <script type="text/javascript">
+    function Sample1(){
+        var inp = ans.value;  //テキストエリアの値を取得
+         if(inp == seikai/*'親子'*/ ){
+            alert("正解です！\n"+ inp +"が入力されました。");
+         }
+         else{
+            alert("残念．不正解です．\n"+ inp +"が入力されました。");
+         }
+    }
+  </script>
+
+
+ 
+  </head>
+  <body>
+  <div id='myContainer'></div>
+	<div>
+	解答を「漢字2字の熟語」で<br>
+	入力してください．<br>
+	<input id="ans" type="text" size="20" value=""><input type="button" id="input" value="回答する" onclick="Sample1()"/>
+	</div>
+		  
+  </body>
+</html>
