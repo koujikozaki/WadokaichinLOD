@@ -19,7 +19,7 @@ foreach ($events as $event) {
   // テキストを返信
   //$bot->replyText($event->getReplyToken(), 'TextMessage');
   // テキストを返信し次のイベントの処理へ
-      replyTextMessage($bot, $event->getReplyToken(), 'Postback受信「' . $event->getPostbackData() . '」');
+      replyTextMessage($bot, $event->getReplyToken(), 'TextMessage');
 
   }
 
